@@ -13,7 +13,7 @@ public class Main {
         // send a message to the first contact from the previous listed
         // max number of characters - 100
         phone.sendMessage(phone.getContact("1").getPhoneNo(), "message content");
-        phone.listMessages("phone number");
+        phone.listMessages(phone.getContact("1").getPhoneNo());
 
         // send a message to the second contact from the previous listed
         phone.call("phone number");

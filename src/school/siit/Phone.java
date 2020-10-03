@@ -2,7 +2,7 @@ package school.siit;
 
 import java.util.ArrayList;
 
-public abstract class Phone implements Telephone{
+public class Phone implements Telephone{
 
     ArrayList<Contact> contacts = new ArrayList<Contact>();
 
@@ -21,7 +21,10 @@ public abstract class Phone implements Telephone{
         }
     }
     public void listMessages(String phoneNo){
-        
+        for (int i = 0; i < contacts.size(); i++)
+            if (contacts.get(i).getPhoneNo().equals(phoneNo))
+                for (int j = 0; j < contacts.get(i).getMessagesReceived().size(); j++)
+                    System.out.println(contacts.get(i).getMessagesReceived().get(j));
     }
     public void call(String phoneNo){}
     public void viewHistory(){}

@@ -1,8 +1,8 @@
 package school.siit;
 
 public abstract class OnePlus extends Phone {
-    @Override
-    public void addContact() {
-        super.addContact();
-    }
+//    @Override
+//    public void addContact() {
+//        super.addContact();
+//    }
 }

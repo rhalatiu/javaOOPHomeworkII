@@ -8,6 +8,7 @@ public class Contact {
     private String firstName;
     private String lastName;
     ArrayList<String> messagesReceived = new ArrayList<String>();
+    ArrayList<String> callHistory = new ArrayList<String>();
 
     public Contact(){}
 
@@ -56,5 +57,13 @@ public class Contact {
 
     public void sendMessage(String newMessage) {
         this.messagesReceived.add(newMessage);
+    }
+
+    public ArrayList<String> getCallHistory() {
+        return callHistory;
+    }
+
+    public void callContact(ArrayList<String> callHistory) {
+        this.callHistory = callHistory;
     }
 }
