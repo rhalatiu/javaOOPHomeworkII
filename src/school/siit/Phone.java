@@ -45,7 +45,7 @@ public abstract class Phone implements Telephone{
 
     public void viewHistory(){
         for (int i = 0; i < contacts.size(); i++)
-            System.out.println(contacts.get(i).getCallHistory());
+               System.out.println(contacts.get(i).getCallHistory());
     }
 
     public Contact getContact(String contactNo) {
