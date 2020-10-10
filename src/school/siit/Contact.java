@@ -7,8 +7,9 @@ public class Contact {
     private String phoneNo;
     private String firstName;
     private String lastName;
-    ArrayList<String> messagesReceived = new ArrayList<String>();
-    ArrayList<String> callHistory = new ArrayList<String>();
+    ArrayList<String> messagesReceived = new ArrayList<>();
+    ArrayList<String> callsReceived = new ArrayList<>();
+    ArrayList<String> callHistory = new ArrayList<>();
 
     public Contact(){}
 
@@ -59,11 +60,29 @@ public class Contact {
         this.messagesReceived.add(newMessage);
     }
 
+    public ArrayList<String> getCallsReceived() {
+        return callsReceived;
+    }
+
+    public void callContact(String newCall) {
+        this.callsReceived.add(newCall);
+    }
+
     public ArrayList<String> getCallHistory() {
         return callHistory;
     }
 
-    public void callContact(ArrayList<String> callHistory) {
-        this.callHistory = callHistory;
+    public void callHistory(String newCallReceived) {
+        this.callHistory.add(newCallReceived);
+    }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "contactNo='" + contactNo + '\'' +
+                ", phoneNo='" + phoneNo + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
     }
 }
